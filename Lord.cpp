@@ -51,4 +51,20 @@ int main() {
         else
             std::cout << "A calm wave stabilizes the land.\n";
 
-        status(royalPow
+        status(royalPower, stability);
+
+        if (royalPower <= 0 || stability <= 0) {
+            std::cout << "\nThe realm collapses...\n";
+            return 0;
+        }
+    }
+
+    std::cout << "\nFinal Outcome Reached\n";
+
+    if (royalPower > stability)
+        std::cout << "The lord's influence dominates the world.\n";
+    else
+        std::cout << "Balance is restored among all beings.\n";
+
+    return 0;
+}
